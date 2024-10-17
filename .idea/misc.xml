@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.11 (py-voip)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (py-voip)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 3.11.2 (sftp://pi@disk.local:22/home/pi/test/venv/bin/python)" project-jdk-type="Python SDK" />
 </project>

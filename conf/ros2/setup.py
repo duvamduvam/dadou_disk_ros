@@ -20,15 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            #"ai_node = robot.nodes.ai_node:main",
-            "animations_node = robot.nodes.animations_node:main",
-            "audio_node = robot.nodes.audio_node:main",
-            #face_node = robot.nodes.face_node:main",
-            "lights_node = robot.nodes.lights_node:main",
-            "relays_node = robot.nodes.relays_node:main",
-            "servo_node = robot.nodes.servo_node:main",
-            "system_node = robot.nodes.system_node:main",
-            "wheels_node = robot.nodes.wheels_node:main"
+            "lights_node = hardrive.nodes.lights_node:main",
         ],
     },
 )

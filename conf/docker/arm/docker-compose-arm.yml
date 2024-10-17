@@ -1,32 +1,33 @@
 services:
-  dadou-robot:
-    container_name: dadou-robot-container
-    image: dadouuu/dadou-robot-arm:latest
+  dadou-hardrive:
+    container_name: dadou-hardrive-container
+    image: dadouuu/dadou-hardrive-arm:latest
     build:
       context: ../../..
       dockerfile: conf/docker/arm/Dockerfile-arm
-    environment:
+    #environment:
       #- DISPLAY=${DISPLAY}
-      - ALSA_CARD=0
+    #  - ALSA_CARD=0
     #ports:
     #  - "80:80"
     #  - "8000-9000:8000-9000"
     network_mode: "host"
 
     volumes:
-      #- /tmp/.X11-unix:/tmp/.X11-unix
-      - ../../../conf:/home/ros2_ws/src/robot/conf
-      - ../../../robot:/home/ros2_ws/src/robot/robot
-      - ../../../dadou_utils_ros:/home/ros2_ws/src/robot/dadou_utils_ros
-      - ../../../json:/home/ros2_ws/src/robot/json
-      - ../../../medias:/home/ros2_ws/src/robot/medias
+      - ../../../hardrive:/home/ros2_ws/src/hardrive/hardrive
+
+      - ../../../conf:/home/ros2_ws/src/hardrive/conf
+      - ../../../robot:/home/ros2_ws/src/hardrive/robot
+      - ../../../dadou_utils:/home/ros2_ws/src/hardrive/dadou_utils
+      - ../../../json:/home/ros2_ws/src/hardrive/json
       - ../../../../robot_bringup:/home/ros2_ws/src/robot_bringup
       - ../../../../robot_interfaces:/home/ros2_ws/src/robot_interfaces
       - ../../../../../build:/home/ros2_ws/build
       - ../../../../../install:/home/ros2_ws/install
       - ../../../../../log:/home/ros2_ws/log
-      - ../../../conf/ros2/setup.py:/home/ros2_ws/src/robot/setup.py
-      - ../../../conf/ros2/package.xml:/home/ros2_ws/src/robot/package.xml
+      - ../../../../../../scripts:/home/scripts
+      - ../../../conf/ros2/setup.py:/home/ros2_ws/src/hardrive/setup.py
+      - ../../../conf/ros2/package.xml:/home/ros2_ws/src/hardrive/package.xml
       - /dev:/dev
       - /dev/snd:/dev/snd
     #  - /dev/null:/folder/fileToBeExcluded

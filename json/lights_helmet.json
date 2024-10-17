@@ -15,7 +15,7 @@
             "sea colorcycle": 0,
             "oulala": 0.2,
             "sparkle": 0.6,
-            "rainbow_sparkle": 1
+            "solido": 1
         }
     },
     "heidi": {
@@ -23,7 +23,6 @@
         "loop": false,
         "duration": 999,
         "sequences": {
-            "rainbow_sparkle": 0.4,
             "comet2": 0.8,
             "sparkle10": 1
         }
